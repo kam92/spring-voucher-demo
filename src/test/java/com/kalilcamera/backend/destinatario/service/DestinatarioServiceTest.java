@@ -3,7 +3,6 @@ package com.kalilcamera.backend.destinatario.service;
 import Stub.DestinatarioTOStub;
 import com.kalilcamera.backend.destinatario.entity.Destinatario;
 import com.kalilcamera.backend.destinatario.repository.DestinatarioRepository;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -13,8 +12,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(MockitoExtension.class)
-@Disabled
-
 public class DestinatarioServiceTest {
 
     @InjectMocks

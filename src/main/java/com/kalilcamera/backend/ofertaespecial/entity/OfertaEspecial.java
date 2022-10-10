@@ -1,5 +1,6 @@
 package com.kalilcamera.backend.ofertaespecial.entity;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,6 +22,7 @@ import java.io.Serializable;
 public class OfertaEspecial implements Serializable {
 
     @Id
+    @Hidden
     private String id;
 
     @NotBlank

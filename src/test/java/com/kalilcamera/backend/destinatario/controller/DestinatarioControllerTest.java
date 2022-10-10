@@ -4,7 +4,6 @@ import Stub.DestinatarioTOStub;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kalilcamera.backend.destinatario.entity.Destinatario;
 import com.kalilcamera.backend.destinatario.service.DestinatarioService;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,6 @@ import java.util.List;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DestinatarioController.class)
-@Disabled
 class DestinatarioControllerTest {
     @Autowired
     MockMvc mockMvc;
@@ -42,7 +40,7 @@ class DestinatarioControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .content(this.mapper.writeValueAsString(destinatario));
 
-        mockMvc.perform(mockRequest).andExpect(status().isCreated());
+        mockMvc.perform(mockRequest).andExpect(status().is2xxSuccessful());
     }
 
     @Test
