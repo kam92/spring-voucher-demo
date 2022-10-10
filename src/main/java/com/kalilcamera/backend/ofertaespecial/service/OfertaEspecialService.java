@@ -37,7 +37,7 @@ public class OfertaEspecialService {
             return new ResponseEntity<>(ofertaEspecialInput, HttpStatus.CREATED);
 
         } catch (DataIntegrityViolationException e) {
-            return new ResponseEntity<>("destinatário já cadastrado.", HttpStatus.CONFLICT);
+            return new ResponseEntity<>("oferta especial já cadastrada.", HttpStatus.CONFLICT);
         } catch (Exception e) {
             log.error("Erro ao cadastrar destinatário {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

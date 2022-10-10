@@ -44,7 +44,7 @@ class DestinatarioControllerTest {
     }
 
     @Test
-    public void listAll_success() throws Exception {
+    void listAll_success() throws Exception {
         Destinatario destinatario = DestinatarioTOStub.valid();
 
         List<Destinatario> destinatarioList = new ArrayList<>(Arrays.asList(destinatario));

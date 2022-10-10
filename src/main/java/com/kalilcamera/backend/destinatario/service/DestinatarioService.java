@@ -23,7 +23,7 @@ public class DestinatarioService {
         try {
             return new ResponseEntity<>(destinatarioRepository.findAll(), HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Erro ao listar ofertas especiais: {}", e.getMessage());
+            log.error("Erro ao listar destinatarios: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

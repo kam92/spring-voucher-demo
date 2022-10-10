@@ -39,7 +39,7 @@ class OfertaEspecialControllerTest {
     }
 
     @Test
-    public void listAll_success() throws Exception {
+    void listAll_success() throws Exception {
         OfertaEspecial ofertaEspecial = OfertaEspecialTOStub.valid();
 
         mockMvc.perform(MockMvcRequestBuilders

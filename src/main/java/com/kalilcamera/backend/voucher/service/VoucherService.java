@@ -24,12 +24,11 @@ import java.util.Optional;
 @Slf4j
 public class VoucherService {
 
+    private final String DADOS_INVALIDOS = "Dados inválidos.";
     @Autowired
     private VoucherRepository voucherRepository;
-
     @Autowired
     private OfertaEspecialService ofertaEspecialService;
-
     @Autowired
     private DestinatarioService destinatarioService;
 
@@ -51,7 +50,7 @@ public class VoucherService {
             return new ResponseEntity<>(voucherRepository.insert(voucherList), HttpStatus.OK);
 
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>("Dados Inválidos", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(DADOS_INVALIDOS, HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             log.error("Erro ao gerar vouchers: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -81,7 +80,7 @@ public class VoucherService {
                     .build(), HttpStatus.OK);
 
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>("Dados inválidos", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(DADOS_INVALIDOS, HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             log.error("Erro ao gerar vouchers: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -110,7 +109,7 @@ public class VoucherService {
             voucherRepository.save(voucher);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<>("Dados inválidos", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(DADOS_INVALIDOS, HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             log.error("Erro ao utilizar voucher: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

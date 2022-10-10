@@ -12,7 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(MockitoExtension.class)
-public class OfertaEspecialServiceTest {
+class OfertaEspecialServiceTest {
 
     @InjectMocks
     private OfertaEspecialService service;
