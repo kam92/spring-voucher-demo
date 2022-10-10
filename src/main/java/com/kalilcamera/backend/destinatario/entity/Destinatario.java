@@ -28,7 +28,7 @@ public class Destinatario implements Serializable {
     @NotBlank
     @Email
     @Field
-    @Schema(example = "valid@email.com", description = "Email")
+    @Schema(example = "valid@email.com", description = "email")
     private String email;
 
     @NotBlank

@@ -35,11 +35,4 @@ public class DestinatarioController {
     public ResponseEntity<?> listAllUserAccount() {
         return destinatarioService.getAll();
     }
-
-    @GetMapping("/listar")
-    @Operation(summary = "Listar destinatários.", description = "Lista destinatários cadastrados.")
-    public ResponseEntity<?> listAllActiveVoucher(@RequestParam @Valid String email) {
-        return destinatarioService.listAllActiveVoucher(email);
-    }
-
 }
