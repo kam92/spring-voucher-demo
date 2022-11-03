@@ -2,7 +2,7 @@
 Gerar Vouchers de desconto para Destinatários, baseado em uma Oferta Especial e uma data de expiração.
 
 Instruções para subir um ambiente de desenvolvimento:<br>
-Necessário ter Java 17 ou alterar o pom.xml.
+Necessário ter Java 17 ou alterar o pom.xml <br>
 Configurar as propriedades do mongoDB em application.properties<br>
 ./mvnw clean install spring-boot:run 
 
