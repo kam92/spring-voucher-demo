@@ -1,11 +1,11 @@
 <b>API REST desenvolvida utilizando Spring Boot<br><br></b>
-
-
-Java 17
+Gerar Vouchers de desconto para Destinatários, baseado em uma Oferta Especial e uma data de expiração.
 
 Instruções para subir um ambiente de desenvolvimento:<br>
+Necessário ter Java 17 ou alterar o pom.xml.
 Configurar as propriedades do mongoDB em application.properties<br>
 ./mvnw clean install spring-boot:run 
+
 
 Documentação SwaggerUI:<br>
 http://127.0.0.1:8080/docs/swagger-ui <br>
