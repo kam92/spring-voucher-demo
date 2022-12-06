@@ -13,9 +13,16 @@ Através daqui é possível utilizar todos os endpoints do sistema.<br>
 
 Fluxo:<br>
 <br>
--Cadastrar Destinatário (POST com nome e email)<br>
--Cadastrar Oferta Especial (POST com percentual de desconto, nome da oferta)<br>
+-Cadastrar Destinatário (POST com nome e email): Cadastra um Destinatário no sistema. <br> 
+-Listar Destinatários (GET): Lista dos Destinatários cadastrados. <br>
 <br>
--Gerar vouchers (POST com data de expiração e nome da Oferta Especial)<br>
-Vai gerar um voucher de 8 dígitos para cada Destinatário cadastrado<br>
-É possível fazer um POST com o voucher + email do destinatário para conferir a promoção e data do voucher, e outro POST para consumir de fato o voucher (O que determina o voucher como consumido, é ter a propriedade dataUtilizacao diferente de null).<br>
+-Cadastrar Oferta Especial (POST com percentual de desconto, nome da oferta): Cadastra uma Oferta Especial no sistema.<br>
+-Listar Oferta Especial (GET): Lista de todas Oferta Especial cadastradas<br>
+<br>
+-Gerar vouchers (POST com data de expiração do Voucher e nome da Oferta Especial cadastrada)<br>
+Vai gerar um Voucher de 8 dígitos para cada Destinatário cadastrado<br>
+<br>
+O Voucher é atrelado a um Destinatário e uma Oferta Especial, o percentual de desconto é definido pela Oferta Especial.<br>
+<br>
+É possível fazer um POST  com o código do Voucher + email do Destinatário para verificar se o Voucher é válido e receber qual é a Oferta Especial e qual data de expiração do Voucher. <br>
+Também é possível fazer um POST para consumir de fato o voucher (O que determina o voucher como consumido, é ter a propriedade dataUtilizacao diferente de null).<br>
