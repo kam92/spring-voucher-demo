@@ -1,0 +1,33 @@
+version: "3.6"
+services:
+
+  app:
+    build: ./
+    dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.data.mongodb.host=localhost",
+        "spring.data.mongodb.port=27017",
+        "server.port":"$SPRING_DOCKER_PORT",
+        "spring.data.mongodb.database=voucher_db_test2",
+        "springdoc.api-docs.path=/docs/apidoc",
+        "spring.jpa.properties.hibernate.ogm.datastore.create_database=true",
+        "springdoc.swagger-ui.path=/docs/swagger-ui",
+        "spring.mvc.pathmatch.matching-strategy=ant_path_matcher"
+        }'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+  mongo-db:
+    image: mongo
+    ports:
+      - ${MONGO_LOCAL_PORT}:${MONGO_DOCKER_PORT}
+    container_name: mongo-db
+    volumes:
+      - ./db/:/data/db
