@@ -1,4 +1,4 @@
-<b>API REST desenvolvida utilizando Spring Boot<br><br></b>
+<b>API REST desenvolvida utilizando Spring Boot + MongoDB + Docker<br><br></b>
 Gerar Vouchers de desconto para Destinatários, baseado em uma Oferta Especial e uma data de expiração.
 
 Instruções para subir um ambiente de desenvolvimento:<br>
